@@ -1,1 +1,9 @@
 rootProject.name = 'jaz-users'
+
+// Treat these folders as Gradle subprojects (independent Spring Boot apps/libraries)
+include('users-data', 'users-data-updater', 'users-random-api-client', 'users-web-api')
+
+project(':users-data').projectDir = file('users-data')
+project(':users-data-updater').projectDir = file('users-data-updater')
+project(':users-random-api-client').projectDir = file('users-random-api-client')
+project(':users-web-api').projectDir = file('users-web-api')

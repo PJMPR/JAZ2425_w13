@@ -26,3 +26,17 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+// This module is a reusable client/library (no @SpringBootApplication main class).
+// Build a plain jar instead of a bootJar.
+tasks.named('bootJar') {
+    enabled = false
+}
+
+tasks.named('bootRun') {
+    enabled = false
+}
+
+tasks.named('jar') {
+    enabled = true
+}
